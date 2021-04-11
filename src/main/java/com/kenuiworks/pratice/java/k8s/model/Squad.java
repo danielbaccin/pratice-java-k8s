@@ -11,8 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
-@Data
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Squad {
@@ -28,3 +28,5 @@ public class Squad {
     @NotNull
     private Integer numberOfMembers;
 }
+
+
