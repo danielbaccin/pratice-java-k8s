@@ -7,3 +7,14 @@ run-db: stop-db rm-db
 
 run-app: stop-app rm-app
 	docker run --name myapp -p 8080:8080 -d -e DATABASE_SERVER_NAME=mysql57 --link mysql57:mysql57 pratice-java-k8s:latest
+stop-app:
+	- docker stop myapp
+
+stop-db:
+	- docker stop mysql57
+
+rm-app:	stop-app
+	- docker rm myapp
+
+rm-db: stop-db
+	- docker rm mysql57
